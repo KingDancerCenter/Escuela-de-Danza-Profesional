@@ -71,7 +71,7 @@ h2{
 
 .card:hover{
     transform:translateY(-10px) scale(1.03);
-    background:rgba(255,255,255,0.2);
+    background:rgba(173, 81, 204, 0.815);
 }
 
 .card h3{
@@ -179,7 +179,7 @@ footer{
 }
 
 body{
-    background: #deb4f6;
+    background: #dfb8f6;
     background-image: url("imagenes/king1.jpeg");
     background-size: contain ;        /* Ajusta al tamaño completo */
     background-position: center;   /* Centra la imagen */
@@ -279,12 +279,16 @@ body{
 
     font-size: 80px;
     font-family: 'Times New Roman', Times, serif;
+    background: #3c096c6f;
+    border-radius:25px;       /* redondea las puntas */
 }
 
 .titulo p{
 
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
+    background: #3c096c6f;
+    border-radius:25px;       /* redondea las puntas */
 }
 
 
