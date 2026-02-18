@@ -287,8 +287,21 @@ body{
 
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
-    background: #3c096c6f;
+    background: #3c096c4e;
     border-radius:25px;       /* redondea las puntas */
+}
+
+.titulosas{
+
+    background: #f674a84e;
+    border-radius:25px;       /* redondea las puntas */
+}
+
+.titulos{
+
+    background: #b36cf655;
+    border-radius:25px;       /* redondea las puntas */
+    font-size: 40px;
 }
 
 
