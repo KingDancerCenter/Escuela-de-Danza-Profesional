@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Dance Center</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+
+<img src="imagenes/king2.jpeg" alt="Kings Dance Center" class="img-estilo">
+
+    <h1>💜 KINGS DANCE CENTER 💜</h1>
+    <p>- Escuela de Danza Profesional -</p>
+    <div class="header-buttons">
+        <a href="#paquetes" class="btn">Ver Paquetes</a>
+        <a href="https://www.instagram.com/kings_dance_center" target="_blank" class="btn insta">Instagram</a>
+    </div>
+</header>
+
+<section class="sucursales">
+    <h2>📍 Nuestras Sucursales</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>SUCURSAL REYES</h3>
+            <p>56430 av. Texcoco, C. 10 Esq,<br>
+            Valle de los Reyes, 56430 Mexico, Méx.</p>
+        </div>
+
+        <div class="card">
+            <h3>SUCURSAL EL PINO</h3>
+            <p>Francisco I. Madero 2,<br>
+            El Pino, 56507 El Pino, Méx.</p>
+        </div>
+
+        <div class="card">
+            <h3>SUCURSAL IZTAPALAPA</h3>
+            <p>Sol 50, Lomas de la Estancia,<br>
+            Iztapalapa, 09640 Ciudad de México, CDMX</p>
+        </div>
+    </div>
+</section>
+
+<section class="servicios">
+    <h2>💃 Servicios Profesionales</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Montaje Coreográfico</h3>
+            <ul>
+                <li>Presentaciones</li>
+                <li>XV años</li>
+                <li>Bodas</li>
+                <li>Salidas escolares</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Clases de Baile</h3>
+            <ul>
+                <li>Jazz</li>
+                <li>Pop</li>
+                <li>Ritmos Latinos</li>
+                <li>Urbano</li>
+                <li>Quebradita</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="paquetes" class="paquetes">
+    <h2>🎭 Paquetes Coreográficos</h2>
+
+    <div class="cards">
+
+        <div class="card paquete">
+            <h3>SHOW COREOGRÁFICO (FAMILIARES / AMIGOS)</h3>
+            <p class="precio">$7,500 contado / $9,000 facilidades</p>
+            <button onclick="enviarWhatsApp('SHOW COREOGRÁFICO (FAMILIARES / AMIGOS) - $7,500 contado / $9,000 facilidades')" class="btn-card">Contratar</button>
+        </div>
+
+        <div class="card paquete">
+            <h3>SHOW COREOGRÁFICO (4 BAILARINES)</h3>
+            <p class="precio">$11,000 contado / $12,500 facilidades</p>
+            <button onclick="enviarWhatsApp('SHOW COREOGRÁFICO (4 BAILARINES) - $11,000 contado / $12,500 facilidades')" class="btn-card">Contratar</button>
+        </div>
+
+        <div class="card paquete">
+            <h3>SHOW COREOGRÁFICO (6 BAILARINES)</h3>
+            <p class="precio">$14,500 contado / $16,000 facilidades</p>
+            <button onclick="enviarWhatsApp('SHOW COREOGRÁFICO (6 BAILARINES) - $14,500 contado / $16,000 facilidades')" class="btn-card">Contratar</button>
+        </div>
+
+        <div class="card paquete premium">
+            <h3>PAQUETE GRUPO KINGS 👑</h3>
+            <p class="precio">$28,500 contado / $30,000 facilidades</p>
+            <button onclick="enviarWhatsApp('PAQUETE GRUPO KINGS 👑 - $28,500 contado / $30,000 facilidades')" class="btn-card">¡QUIERO ESTE!</button>
+        </div>
+
+    </div>
+</section>
+
+<div class="contenedor-imagenes">
+    <img src="imagenes/king2.jpeg" alt="Imagen izquierda">
+    <img src="imagenes/king3.jpeg" alt="Imagen derecha">
+</div>
+
+
+<footer>
+    <h2>✨ KINGS DANCE CENTER ✨</h2>
+    <p>Transformamos momentos en espectáculos inolvidables 💜</p>
+</footer>
+
+<script>
+function enviarWhatsApp(paquete) {
+    let numero = "55 8617 1442"; // <-- Reemplaza aquí
+    let mensaje = "Hola 👋 estoy interesado en el paquete:\n\n" + paquete + "\n\n¿Podrían darme más información?";
+    let url = "https://web.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
+}
+</script>
+
+
+
+</body>
+</html>
