@@ -208,13 +208,32 @@
 </footer>
 
 <script>
-function enviarWhatsApp(paquete) {
-    let numero = "55 8617 1442"; // <-- Reemplaza aquí
-    let mensaje = "Hola 👋 estoy interesado en el paquete:\n\n" + paquete + "\n\n¿Podrían darme más información?";
-    let url = "https://web.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+function enviarWhatsApp(paquete){
+
+    let numero = "5586171442"; // ⚠️ SIN espacios, SIN +, SIN guiones
+
+    let mensaje = "Hola 👋 estoy interesado en el paquete:\n\n" 
+                  + paquete + 
+                  "\n\n¿Podrían darme más información?";
+
+    let esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    let url;
+
+    if(esMovil){
+        // 📱 Celular abre la app
+        url = "https://wa.me/" + numero + 
+              "?text=" + encodeURIComponent(mensaje);
+    } else {
+        // 💻 Computadora abre WhatsApp Web
+        url = "https://web.whatsapp.com/send?phone=" + numero + 
+              "&text=" + encodeURIComponent(mensaje);
+    }
+
     window.open(url, "_blank");
 }
 </script>
+
 
 <script>
 function toggleVideo(){
@@ -260,3 +279,4 @@ function toggleVideo2(){
 
 </body>
 </html>
+
