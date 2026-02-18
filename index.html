@@ -11,17 +11,43 @@
 
 <header>
 
-<img src="imagenes/king2.jpeg" alt="Kings Dance Center" class="img-estilo">
 
-    <h1>💜 KINGS DANCE CENTER 💜</h1>
-    <p>- Escuela de Danza Profesional -</p>
-    <div class="header-buttons">
-        <a href="#paquetes" class="btn">Ver Paquetes</a>
-        <a href="https://www.instagram.com/kings_dance_center" target="_blank" class="btn insta">Instagram</a>
+
+<header class="hero">
+
+    <video id="videoFondo" autoplay muted loop playsinline class="video-fondo">
+        <source src="videos/kingvideo1.mp4" type="video/mp4">
+    </video>
+
+    <div class="contenido-header">
+        <p>💜 Kings Dance Center 💜</p>
+
+        <button class="btn" onclick="toggleVideo()" id="btnAudio">
+            🔊 Activar sonido
+        </button>
     </div>
+
 </header>
 
+</header>
+
+    <div class="titulo">
+
+
+        <h1>💜 KINGS DANCE CENTER 💜</h1>
+        <p>- Escuela de Danza Profesional -</p>
+        <div class="header-buttons">
+            <a href="#paquetes" class="btn">Ver Paquetes</a>
+            <a href="https://www.instagram.com/kings_dance_center" target="visor" class="btn insta">Instagram</a>
+        </div> 
+    
+
+
+    </div>
+    
+
 <section class="sucursales">
+    
     <h2>📍 Nuestras Sucursales</h2>
 
     <div class="cards">
@@ -104,10 +130,30 @@
     </div>
 </section>
 
+
 <div class="contenedor-imagenes">
     <img src="imagenes/king2.jpeg" alt="Imagen izquierda">
     <img src="imagenes/king3.jpeg" alt="Imagen derecha">
 </div>
+
+
+
+<header class="hero">
+
+    <video id="videoFondo2" autoplay muted loop playsinline class="video-fondo">
+        <source src="videos/kingvideo2.mp4" type="video/mp4">
+    </video>
+
+    <div class="contenido-header">
+        <p>💜 Kings Dance Center 💜</p>
+
+        <button class="btn" onclick="toggleVideo2()" id="btnAudio2">
+            🔊 Activar sonido
+        </button>
+    </div>
+
+</header>
+
 
 
 <footer>
@@ -123,6 +169,46 @@ function enviarWhatsApp(paquete) {
     window.open(url, "_blank");
 }
 </script>
+
+<script>
+function toggleVideo(){
+    let video = document.getElementById("videoFondo");
+    let boton = document.getElementById("btnAudio");
+
+    if(video.muted){
+        video.muted = false;
+        video.play();
+        boton.innerHTML = "⏸ Pausar";
+    } else if(video.paused){
+        video.play();
+        boton.innerHTML = "⏸ Pausar";
+    } else {
+        video.pause();
+        boton.innerHTML = "▶ Reproducir";
+    }
+}
+</script>
+
+
+<script>
+function toggleVideo2(){
+    let video = document.getElementById("videoFondo2");
+    let boton = document.getElementById("btnAudio2");
+
+    if(video.muted){
+        video.muted = false;
+        video.play();
+        boton.innerHTML = "⏸ Pausar";
+    } else if(video.paused){
+        video.play();
+        boton.innerHTML = "⏸ Pausar";
+    } else {
+        video.pause();
+        boton.innerHTML = "▶ Reproducir";
+    }
+}
+</script>
+
 
 
 
