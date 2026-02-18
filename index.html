@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,8 +11,6 @@
 <body>
 
 <header>
-
-
 
 <header class="hero">
 
@@ -38,6 +37,7 @@
         <p>- Escuela de Danza Profesional -</p>
         <div class="header-buttons">
             <a href="#paquetes" class="btn">Ver Paquetes</a>
+            <a href="#clases" class="btn">Clases</a>
             <a href="https://www.instagram.com/kings_dance_center" target="visor" class="btn insta">Instagram</a>
         </div> 
     
@@ -46,9 +46,9 @@
     </div>
     
 
-<section class="sucursales">
+<section class="sucursales" >
     
-    <h2>📍 Nuestras Sucursales</h2>
+    <h2 class="titulos">📍 Nuestras Sucursales</h2>
 
     <div class="cards">
         <div class="card">
@@ -72,7 +72,7 @@
 </section>
 
 <section class="servicios">
-    <h2>💃 Servicios Profesionales</h2>
+    <h2 class="titulos">💃 Servicios Profesionales</h2>
 
     <div class="cards">
         <div class="card">
@@ -98,8 +98,86 @@
     </div>
 </section>
 
+<section  id="clases">
+
+        <h2 class="titulos">Horario de clases</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>lunes</h3>
+            <ul>
+                <li>Jazz</li>
+                <li>(Alynai Solís)</li>
+                <li>4:00 PM</li>
+                <li>5:30 PM</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Martes</h3>
+            <ul>
+                <li>Pop</li>
+                <li>(Eduardo García)</li>
+                <li>4:00 PM</li>
+                <li>Pop avanzado</li>
+                <li>(Eduardo García)</li>
+                <li>5:30 PM</li>
+                <li>Salsa</li>
+                <li>7:00 PM</li>
+            </ul>
+        </div>
+
+                <div class="card">
+            <h3>Miércoles</h3>
+            <ul>
+                <li>Jazz</li>
+                <li>(Alynai Solís)</li>
+                <li>4:00 PM</li>
+                <li>Bachata</li>
+                <li>Karim Castillo</li>
+                <li>5:30 PM</li>
+            </ul>
+        </div>
+
+                <div class="card">
+            <h3>Jueves</h3>
+            <ul>
+                <li>Quebradita principiante</li>
+                <li>Karim Castillo</li>
+                <li>4:00 PM</li>
+                <li>Bachata</li>
+                <li>Karim Castillo</li>
+                <li>5:30 PM</li>
+            </ul>
+        </div>
+
+                <div class="card">
+            <h3>Viernes</h3>
+            <ul>
+                <li>Urbano</li>
+                <li>Giovani</li>
+                <li>4:00 PM</li>
+            </ul>
+        </div>
+
+                <div class="card">
+            <h3>Sábado</h3>
+            <ul>
+                <li>Quebradita avanzado</li>
+                <li>12:30 PM</li>
+                <li>Pop</li>
+                <li>(Eduardo García)</li>
+                <li>4:00 PM</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
 <section id="paquetes" class="paquetes">
-    <h2>🎭 Paquetes Coreográficos</h2>
+    <h2 class="titulos">🎭 Paquetes Coreográficos</h2>
 
     <div class="cards">
 
@@ -208,32 +286,13 @@
 </footer>
 
 <script>
-function enviarWhatsApp(paquete){
-
-    let numero = "5586171442"; // ⚠️ SIN espacios, SIN +, SIN guiones
-
-    let mensaje = "Hola 👋 estoy interesado en el paquete:\n\n" 
-                  + paquete + 
-                  "\n\n¿Podrían darme más información?";
-
-    let esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    let url;
-
-    if(esMovil){
-        // 📱 Celular abre la app
-        url = "https://wa.me/" + numero + 
-              "?text=" + encodeURIComponent(mensaje);
-    } else {
-        // 💻 Computadora abre WhatsApp Web
-        url = "https://web.whatsapp.com/send?phone=" + numero + 
-              "&text=" + encodeURIComponent(mensaje);
-    }
-
+function enviarWhatsApp(paquete) {
+    let numero = "55 8617 1442"; // <-- Reemplaza aquí
+    let mensaje = "Hola 👋 estoy interesado en el paquete:\n\n" + paquete + "\n\n¿Podrían darme más información?";
+    let url = "https://web.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
     window.open(url, "_blank");
 }
 </script>
-
 
 <script>
 function toggleVideo(){
@@ -279,4 +338,3 @@ function toggleVideo2(){
 
 </body>
 </html>
-
