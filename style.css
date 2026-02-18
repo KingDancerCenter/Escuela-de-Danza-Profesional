@@ -185,7 +185,8 @@ body{
     background-position: center;   /* Centra la imagen */
     background-repeat: no-repeat;  /* No se repite */
     background-attachment: fixed;  /* Efecto parallax */
-    color: rgb(227, 227, 7);
+    color: rgb(225, 192, 25);
+    
 }
 
 
@@ -215,4 +216,147 @@ body{
     .contenedor-imagenes img{
         width:90%;
     }
+}
+
+
+.hero{
+    position:relative;
+    height:100vh;   /* 🔥 AQUÍ cambias el tamaño vertical */
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+/* VIDEO */
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.video-fondo{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;   /* 🔥 CAMBIAR A 0 */
+}
+
+/* Capa oscura */
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1;   /* 🔥 encima del video */
+}
+
+/* Contenido encima */
+.contenido-header{
+    position:relative;
+    z-index:2;   /* 🔥 encima de todo */
+}
+
+
+.titulo{
+    position:relative;
+    text-align:center;   /* centra horizontal */
+    display:grid;
+    flex-direction:column;
+    padding: 10%;
+    align-items:center;      /* centra horizontal */
+    height:100vh;            /* ocupa toda la pantalla */
+}
+
+
+.titulo h1{
+
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.titulo p{
+
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ========================= */
+/* 📱 AJUSTES SOLO CELULAR  */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    /* Evita desbordamiento horizontal */
+    body{
+        overflow-x:hidden;
+    }
+
+    /* Reduce altura de los heroes en celular */
+    .hero{
+        height:70vh;
+        padding:20px;
+    }
+
+    /* Ajusta el título grande */
+    .titulo{
+        height:auto;
+        padding:60px 20px;
+    }
+
+    .titulo h1{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .titulo p{
+        font-size:18px;
+    }
+
+    /* Botones uno debajo del otro */
+    .header-buttons{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:90%;
+        max-width:300px;
+        text-align:center;
+    }
+
+    .insta{
+        margin-left:0; /* quita separación lateral */
+        margin-top:10px;
+    }
+
+    /* Cards en columna */
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    /* Imágenes no se enciman */
+    .contenedor-imagenes{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+
+    .contenedor-imagenes img{
+        width:90%;
+    }
+
 }
