@@ -2,265 +2,449 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kings Dance Center</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kings Dance Center</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-
 <header class="hero">
+<video id="videoFondo" autoplay muted loop playsinline class="video-fondo">
+<source src="videos/kingvideo1.mp4" type="video/mp4">
+</video>
 
-    <video id="videoFondo" autoplay muted loop playsinline class="video-fondo">
-        <source src="videos/kingvideo1.mp4" type="video/mp4">
-    </video>
-
-    <div class="contenido-header">
-        <p>💜 Kings Dance Center 💜</p>
-
-        <button class="btn" onclick="toggleVideo()" id="btnAudio">
-            🔊 Activar sonido
-        </button>
-    </div>
-
+<div class="contenido-header">
+<button class="btn" onclick="toggleVideo()" id="btnAudio">
+🔊 Activar sonido
+<p>💜 Kings Dance Center 💜</p>
+</button>
+</div>
 </header>
 
-</header>
+<div class="titulo">
+<h1>💜KINGS DANCE CENTER💜</h1>
+<p>- Escuela de Danza Profesional -</p>
 
-    <div class="titulo">
+<div class="header-buttons">
+<a href="#paquetes" class="btn">Ver Paquetes</a>
+<a href="#clases" class="btn">Clases</a>
+<a href="#efectos" class="btn">Efectos Especiales</a>
+<a href="#galeria" class="btn">Galería</a>
+<a href="https://www.instagram.com/kings_dance_center" target="visor" class="btn insta">Instagram</a>
+</div>
+</div>
 
+<!-- ================= SUCURSALES ================= -->
 
-        <h1>💜KINGS DANCE CENTER💜</h1>
-        <p>- Escuela de Danza Profesional -</p>
-        <div class="header-buttons">
-            <a href="#paquetes" class="btn">Ver Paquetes</a>
-            <a href="#clases" class="btn">Clases</a>
-            <a href="https://www.instagram.com/kings_dance_center" target="visor" class="btn insta">Instagram</a>
-        </div> 
-    
+<section class="sucursales">
+<h2 class="titulos">📍 Nuestras Sucursales</h2>
 
+<div class="cards">
+<div class="card">
+<h3>SUCURSAL REYES</h3>
+<p>56430 av. Texcoco, C. 10 Esq,<br> Valle de los Reyes, 56430 Mexico, Méx.</p>
+</div>
 
-    </div>
-    
+<div class="card">
+<h3>SUCURSAL EL PINO</h3>
+<p>Francisco I. Madero 2,<br> El Pino, 56507 El Pino, Méx.</p>
+</div>
 
-<section class="sucursales" >
-    
-    <h2 class="titulos">📍 Nuestras Sucursales</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>SUCURSAL REYES</h3>
-            <p>56430 av. Texcoco, C. 10 Esq,<br>
-            Valle de los Reyes, 56430 Mexico, Méx.</p>
-        </div>
-
-        <div class="card">
-            <h3>SUCURSAL EL PINO</h3>
-            <p>Francisco I. Madero 2,<br>
-            El Pino, 56507 El Pino, Méx.</p>
-        </div>
-
-        <div class="card">
-            <h3>SUCURSAL IZTAPALAPA</h3>
-            <p>Sol 50, Lomas de la Estancia,<br>
-            Iztapalapa, 09640 Ciudad de México, CDMX</p>
-        </div>
-    </div>
+<div class="card">
+<h3>SUCURSAL IZTAPALAPA</h3>
+<p>Sol 50, Lomas de la Estancia,<br> Iztapalapa, 09640 Ciudad de México, CDMX</p>
+</div>
+</div>
 </section>
+
+<!-- ================= SERVICIOS ================= -->
 
 <section class="servicios">
-    <h2 class="titulos">💃 Servicios Profesionales</h2>
+<h2 class="titulos">💃 Servicios Profesionales</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Montaje Coreográfico</h3>
-            <ul>
-                <li>Presentaciones</li>
-                <li>XV años</li>
-                <li>Bodas</li>
-                <li>Salidas escolares</li>
-            </ul>
-        </div>
+<div class="cards">
+<div class="card">
+<h3>Montaje Coreográfico</h3>
+<ul>
+<li>Presentaciones</li>
+<li>XV años</li>
+<li>Bodas</li>
+<li>Salidas escolares</li>
+</ul>
+</div>
 
-        <div class="card">
-            <h3>Clases de Baile</h3>
-            <ul>
-                <li>Jazz</li>
-                <li>Pop</li>
-                <li>Ritmos Latinos</li>
-                <li>Urbano</li>
-                <li>Quebradita</li>
-            </ul>
-        </div>
-    </div>
+<div class="card">
+<h3>Clases de Baile</h3>
+<ul>
+<li>Jazz</li>
+<li>Pop</li>
+<li>Ritmos Latinos</li>
+<li>Urbano</li>
+<li>Quebradita</li>
+</ul>
+</div>
+</div>
 </section>
 
-<section  id="clases">
+<!-- ================= HORARIOS ================= -->
 
-        <h2 class="titulos">Horario de clases</h2>
+<section id="clases" ></section>
 
-    <div class="cards">
+<h2 class="titulos titulo-click" onclick="toggleSeccion('clases')">
+Horario de clases
+</h2>
 
-        <div class="card">
-            <h3>lunes</h3>
-            <ul>
-                <li>Jazz</li>
-                <li>(Alynai Solís)</li>
-                <li>4:00 PM</li>
-                <li>5:30 PM</li>
-            </ul>
-        </div>
+<div class="cards contenido-seccion" id="contenido-clases">
 
-        <div class="card">
-            <h3>Martes</h3>
-            <ul>
-                <li>Pop</li>
-                <li>(Eduardo García)</li>
-                <li>4:00 PM</li>
-                <li>Pop avanzado</li>
-                <li>(Eduardo García)</li>
-                <li>5:30 PM</li>
-                <li>Salsa</li>
-                <li>7:00 PM</li>
-            </ul>
-        </div>
 
-                <div class="card">
-            <h3>Miércoles</h3>
-            <ul>
-                <li>Jazz</li>
-                <li>(Alynai Solís)</li>
-                <li>4:00 PM</li>
-                <li>Bachata</li>
-                <li>Karim Castillo</li>
-                <li>5:30 PM</li>
-            </ul>
-        </div>
+<div class="cards">
+<div class="card">
+<h3>Lunes</h3>
+<ul>
+<li>Jazz</li>
+<li>(Alynai Solís)</li>
+<li>4:00 PM</li>
+<li>5:30 PM</li>
+</ul>
+</div>
 
-                <div class="card">
-            <h3>Jueves</h3>
-            <ul>
-                <li>Quebradita principiante</li>
-                <li>Karim Castillo</li>
-                <li>4:00 PM</li>
-                <li>Bachata</li>
-                <li>Karim Castillo</li>
-                <li>5:30 PM</li>
-            </ul>
-        </div>
+<div class="card">
+<h3>Martes</h3>
+<ul>
+<li>Pop</li>
+<li>(Eduardo García)</li>
+<li>4:00 PM</li>
+<li>Pop avanzado</li>
+<li>(Eduardo García)</li>
+<li>5:30 PM</li>
+<li>Salsa</li>
+<li>7:00 PM</li>
+</ul>
+</div>
 
-                <div class="card">
-            <h3>Viernes</h3>
-            <ul>
-                <li>Urbano</li>
-                <li>Giovani</li>
-                <li>4:00 PM</li>
-            </ul>
-        </div>
+<div class="card">
+<h3>Miércoles</h3>
+<ul>
+<li>Jazz</li>
+<li>(Alynai Solís)</li>
+<li>4:00 PM</li>
+<li>Bachata</li>
+<li>Karim Castillo</li>
+<li>5:30 PM</li>
+</ul>
+</div>
 
-                <div class="card">
-            <h3>Sábado</h3>
-            <ul>
-                <li>Quebradita avanzado</li>
-                <li>12:30 PM</li>
-                <li>Pop</li>
-                <li>(Eduardo García)</li>
-                <li>4:00 PM</li>
-            </ul>
-        </div>
+<div class="card">
+<h3>Jueves</h3>
+<ul>
+<li>Quebradita principiante</li>
+<li>Karim Castillo</li>
+<li>4:00 PM</li>
+<li>Bachata</li>
+<li>Karim Castillo</li>
+<li>5:30 PM</li>
+</ul>
+</div>
 
-    </div>
+<div class="card">
+<h3>Viernes</h3>
+<ul>
+<li>Urbano</li>
+<li>Giovani</li>
+<li>4:00 PM</li>
+</ul>
+</div>
 
+<div class="card">
+<h3>Sábado</h3>
+<ul>
+<li>Quebradita avanzado</li>
+<li>12:30 PM</li>
+<li>Pop</li>
+<li>(Eduardo García)</li>
+<li>4:00 PM</li>
+</ul>
+</div>
+</div>
 </section>
 
+</div>
+
+<!--PAQUETES----------------------------------------------------->
 <section id="paquetes" class="paquetes">
-    <h2 class="titulos">🎭 Paquetes Coreográficos</h2>
-
-    <div class="cards">
-
-        <div class="card paquete">
-            <h3>SHOW COREOGRÁFICO (FAMILIARES / AMIGOS)</h3>
-            <p>Chambelanes (amigos o familiares de la quinceañera).
-                Entrada.
-                Brindis, coronación y último juguete (opcional).
-                Vals familiar (opcional).
-                Vals oficial.
-                Dos bailes extras.
-                Ensayo general.
-                Edición de audio.
-                </p>
-            <p class="precio">$7,500 contado / $9,000 facilidades</p>
-            <button onclick="enviarWhatsApp('SHOW COREOGRÁFICO (FAMILIARES / AMIGOS) - $7,500 contado / $9,000 facilidades')" class="btn-card">Contratar</button>
-        </div>
-
-        <div class="card paquete">
-            <h3>SHOW COREOGRÁFICO (4 BAILARINES)</h3>
-            <p>4 bailarines.
-                Entrada.
-                Vals oficial.
-                Dos bailes extras.
-                Ensayo general.
-                Edición de audio.
-                4 cambios de vestuario para bailarines.
-                </p>
-            <p class="precio">$11,000 contado / $12,500 facilidades</p>
-            <button onclick="enviarWhatsApp('SHOW COREOGRÁFICO (4 BAILARINES) - $11,000 contado / $12,500 facilidades')" class="btn-card">Contratar</button>
-        </div>
-
-        <div class="card paquete">
-            <h3>SHOW COREOGRÁFICO (6 BAILARINES)</h3>
-            <p>6 bailarines.
-                Entrada.
-                Vals oficial.
-                Dos bailes extras.
-                Asistencia en cambios de vestuario.
-                Ensayo general.
-                Edición de audio.
-                4 cambios de vestuario para bailarines.
-                </p>
-            <p class="precio">$14,500 contado / $16,000 facilidades</p>
-            <button onclick="enviarWhatsApp('SHOW COREOGRÁFICO (6 BAILARINES) - $14,500 contado / $16,000 facilidades')" class="btn-card">Contratar</button>
-        </div>
-
-        <div class="card paquete premium">
-            <h3>PAQUETE GRUPO KINGS 👑</h3>
-            <p>Espectáculo coreográfico:
-                6 bailarines.
-                Entrada.
-                Vals oficial.
-                Dos bailes extras.
-                Asistencia en cambios de vestuario.
-                Ensayo general.
-                Edición de audio.
-                4 cambios de vestuario para bailarines.
-                Fotografía y video:
-                Sesión fotográfica en estudio o al exterior.
-                Video “Detrás de cámaras”.
-                Cuadro de 20x30 pulgadas.
-                Cuadro de 16x24 pulgadas.
-                Maquillaje y peinado:
-                Prueba de maquillaje y peinado con extensiones.
-                Maquillaje y peinado el día del evento.
-                Uñas.
-                Retoque y cambio de estilos.
-                </p>
-            <p class="precio">$28,500 contado / $30,000 facilidades</p>
-            <button onclick="enviarWhatsApp('PAQUETE GRUPO KINGS 👑 - $28,500 contado / $30,000 facilidades')" class="btn-card">¡QUIERO ESTE!</button>
-        </div>
-
-    </div>
-</section>
+<h2 class="titulos titulo-click" onclick="toggleSeccion('paquetes')">
+🎭 Paquetes Coreográficos
+</h2>
 
 
-<div class="contenedor-imagenes">
-    <img src="imagenes/king2.jpeg" alt="Imagen izquierda">
-    <img src="imagenes/king3.jpeg" alt="Imagen derecha">
+<div class="cards contenido-seccion" id="contenido-paquetes">
+
+
+<!-- PAQUETE 1 -->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+SHOW COREOGRÁFICO (FAMILIARES / AMIGOS)
+</button>
+
+<div class="contenido-paquete">
+<p>
+Chambelanes (amigos o familiares).<br>
+Entrada.<br>
+Vals oficial.<br>
+Dos bailes extras.<br>
+Ensayo general.<br>
+Edición de audio.
+</p>
+
+<p class="precio">$7,500 contado / $9,000 facilidades de pago</p>
+
+<button onclick="enviarWhatsApp('SHOW COREOGRÁFICO FAMILIARES - $7,500')" class="btn-card">
+Contratar
+</button>
+</div>
+
+</div>
+
+<!-- PAQUETE 2 -->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+SHOW COREOGRÁFICO (4 BAILARINES)
+</button>
+
+<div class="contenido-paquete">
+<p>
+4 bailarines.<br>
+Entrada.<br>
+Vals oficial.<br>
+Dos bailes extras.<br>
+Ensayo general.<br>
+Edición de audio.<br>
+4 cambios de vestuario para bailarines.
+</p>
+
+<p class="precio">$11,000 contado / $12,500 facilidades de pago</p>
+
+<button onclick="enviarWhatsApp('SHOW 4 BAILARINES - $11,000')" class="btn-card">
+Contratar
+</button>
+</div>
+
+</div>
+
+<!-------------------------------------->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+SHOW COREOGRÁFICO (6 BAILARINES)
+</button>
+
+<div class="contenido-paquete">
+
+<p>
+6 bailarines.<br>
+Entrada.<br>
+Vals oficial.<br>
+Dos bailes extras.<br>
+Asistencia en cambios de vestuario.<br>
+Ensayo general.<br>
+Edición de audio.<br>
+4 cambios de vestuario para bailarines.
+</p>
+
+<p class="precio">$14,500 contado / $16,000 facilidades de pago</p>
+
+<button class="btn-card">Contratar</button>
+
+</div>
+
 </div>
 
 
+<!-- PAQUETE PREMIUM -->
+<div class="card paquete premium">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+PAQUETE GRUPO KINGS 👑
+</button>
+
+<div class="contenido-paquete">
+<p>
+6 bailarines.<br>
+Entrada.<br>
+Vals oficial.<br>
+Asistencia en cambios de vestuario.<br>
+Ensayo general.<br>
+Edición de audio.<br>
+4 cambios de vestuario para bailarines.<br>
+Fotografía y video:
+Sesión fotográfica en estudio o al exterior.<br>
+Video “Detrás de cámaras”.<br>
+Cuadro de 20x30 pulgadas.<br>
+Cuadro de 16x24 pulgadas.<br>
+Asistencia en cambios de vestuario.<br>
+Maquillaje y peinado:
+Prueba de maquillaje y peinado con extensiones.<br>
+Maquillaje y peinado el día del evento.<br>
+Uñas.
+
+</p>
+
+<p class="precio">$28,500 contado / $30,000 facilidades</p>
+
+<button onclick="enviarWhatsApp('PAQUETE GRUPO KINGS - $28,500')" class="btn-card">
+¡QUIERO ESTE!
+</button>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+<!--EFECTOS ESPESIALES------------------------------------------->
+<section id="efectos"></section>
+
+<h2 class="titulos titulo-click" onclick="toggleSeccion('efectos')">
+🔥 Paquete Efectos Especiales
+</h2>
+
+
+<div class="cards contenido-seccion" id="contenido-efectos">
+
+
+<!-- PIROTECNIA -->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+Pirotecnia
+</button>
+
+<div class="contenido-paquete">
+<p>12 cartuchos</p>
+<p class="precio">$1,200</p>
+<button onclick="enviarWhatsApp('Pirotecnia 12 cartuchos - $1,200')" class="btn-card">
+Contratar
+</button>
+</div>
+
+</div>
+
+<!-- PAPEL CO2 -->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+Papel CO2
+</button>
+
+<div class="contenido-paquete">
+<p>Lluvia de papel (hasta 4 colores)</p>
+<p class="precio">$1,200</p>
+<button onclick="enviarWhatsApp('Papel CO2 lluvia de papel - $1,200')" class="btn-card">
+Contratar
+</button>
+</div>
+
+</div>
+
+<!-- LANZALLAMAS -->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+Lanzallamas
+</button>
+
+<div class="contenido-paquete">
+<p>2 máquinas</p>
+<p class="precio">$1,200</p>
+<button onclick="enviarWhatsApp('Lanzallamas 2 máquinas - $1,200')" class="btn-card">
+Contratar
+</button>
+</div>
+
+</div>
+
+<!-- HIELO SECO -->
+<div class="card paquete">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+Hielo Seco
+</button>
+
+<div class="contenido-paquete">
+<p>Neblina baja (1 pieza)</p>
+<p class="precio">$1,900</p>
+<button onclick="enviarWhatsApp('Hielo seco neblina baja - $1,900')" class="btn-card">
+Contratar
+</button>
+</div>
+
+</div>
+
+<!-- PAQUETE COMPLETO -->
+<div class="card paquete premium">
+
+<button class="acordeon-titulo" onclick="togglePaquete(this)">
+🔥 Paquete Completo
+</button>
+
+<div class="contenido-paquete">
+<p>Incluye los 4 efectos especiales</p>
+<p class="precio">$3,500</p>
+<button onclick="enviarWhatsApp('Paquete completo efectos especiales - $3,500')" class="btn-card">
+¡QUIERO ESTE!
+</button>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!---------------------------------->
+<section id="ejemplos">
+<h2 class="titulos">✨ Mira los videos de ejemplo de efectos espesiales en instagram</h2>
+
+<div style="text-align:center;">
+<a href="https://www.instagram.com/reels/DKsRpAURHRF/" class="btn">Hielo Seco</a>
+<a href="https://www.instagram.com/reels/DRlDlecEWjR/" class="btn">Pirotecnia</a>
+</div>
+</section>
+<!---------------------------------->
+
+
+<section id="galeria">
+<h2 class="titulos">🎥 Galería</h2>
+
+<p style="text-align:center; font-size:20px; margin-bottom:20px;">
+💃 Renta de vestuario $600
+</p>
+
+
+
+<div class="carrusel">
+<div class="slides">
+<img src="imagenes/king4.jpeg">
+<img src="imagenes/king5.jpeg">
+<video src="videos/kingvideo5.mp4" controls></video>
+<video src="videos/kingvideo4.mp4" controls></video>
+</div>
+</div>
+
+<div style="text-align:center; margin-top:20px;">
+<button class="btn" onclick="moverSlide(-1)">⬅</button>
+<button class="btn" onclick="moverSlide(1)">➡</button>
+</div>
+</section>
 
 <header class="hero">
 
@@ -268,11 +452,12 @@
         <source src="videos/kingvideo2.mp4" type="video/mp4">
     </video>
 
-    <div class="contenido-header">
-        <p>💜 Kings Dance Center 💜</p>
+    <div class="contenido-header">        
 
         <button class="btn" onclick="toggleVideo2()" id="btnAudio2">
             🔊 Activar sonido
+            
+            
         </button>
     </div>
 
@@ -287,12 +472,36 @@
 
 <script>
 function enviarWhatsApp(paquete) {
-    let numero = "55 8617 1442"; // <-- Reemplaza aquí
-    let mensaje = "Hola 👋 estoy interesado en el paquete:\n\n" + paquete + "\n\n¿Podrían darme más información?";
-    let url = "https://web.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
-    window.open(url, "_blank");
+let numero = "5586171442";
+let mensaje = "Hola 👋 estoy interesado en:\n\n" + paquete;
+
+let esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+let url = esMovil
+? "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje)
+: "https://web.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+
+window.open(url, "visor");
 }
 </script>
+
+<script>
+let index = 0;
+
+function moverSlide(direccion){
+const slides = document.querySelector(".slides");
+const total = slides.children.length;
+
+index += direccion;
+
+if(index < 0) index = total - 1;
+if(index >= total) index = 0;
+
+slides.style.transform = "translateX(-" + (index * 100) + "%)";
+}
+</script>
+
+
 
 <script>
 function toggleVideo(){
@@ -333,9 +542,29 @@ function toggleVideo2(){
 }
 </script>
 
+<script>
+function togglePaquete(boton){
+
+    const contenido = boton.nextElementSibling;
+
+    contenido.classList.toggle("activo");
+
+}
+</script>
+
+
+<script>
+function toggleSeccion(id){
+
+    const contenedor = document.getElementById("contenido-" + id);
+
+    contenedor.classList.toggle("mostrar");
+
+}
+</script>
+
 
 
 
 </body>
 </html>
-
