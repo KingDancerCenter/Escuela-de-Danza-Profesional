@@ -10,10 +10,18 @@
 /* ========================= */
 
 body{
-    background:#0f0f0f;
+    background:
+        linear-gradient(rgb(7, 7, 7), rgba(106,13,173,0.75)),
+        url("imagenes/king1.jpeg");
+    background-size: contain;
+    background-position:center;
+    background-attachment:fixed;
     color:#ffffff;
     overflow-x:hidden;
+    color: #9a812d;
+
 }
+
 
 .header-buttons{
     margin-top:20px;
@@ -65,6 +73,7 @@ body{
 .titulo{
     padding:80px 0 30px 0;
     text-align:center;
+
 }
 
 
@@ -97,7 +106,7 @@ body{
 .titulos{
     font-size:40px;
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:10px;
     font-weight:800;
     color:#c77dff;
     text-transform:uppercase;
@@ -143,7 +152,7 @@ body{
 /* ========================= */
 
 section{
-    padding:90px 10%;
+    padding:10px 10%;
 }
 
 /* ========================= */
@@ -267,6 +276,84 @@ footer{
 }
 
 
+/* ========================= */
+/* 🎥 CARRUSEL RESPONSIVE */
+/* ========================= */
+
+.carrusel{
+    width:90%;
+    max-width:400px;   /* 🔥 Más pequeño en computadora */
+    margin:40px auto;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.slides{
+    display:flex;
+    transition:transform 0.5s ease;
+}
+
+.slides img,
+.slides video{
+    width:100%;
+    height:auto;
+    flex-shrink:0;
+    border-radius:20px;
+}
+
+
+/* ========================= */
+/* ACORDEÓN PAQUETES */
+/* ========================= */
+
+.acordeon-titulo{
+    width:100%;
+    background:linear-gradient(45deg,#a855f7,#c084fc);
+    color:white;
+    border:none;
+    padding:18px;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    text-align:left;
+}
+
+.acordeon-titulo:hover{
+    transform:scale(1.02);
+}
+
+.contenido-paquete{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height 0.6s ease, opacity 0.4s ease;
+}
+
+.contenido-paquete.activo{
+    max-height:2000px;
+    opacity:1;
+    margin-top:20px;
+}
+
+/* ========================= */
+/* 🔥 ARREGLO PARA QUE NO SE ESTIREN LOS OTROS */
+/* ========================= */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+    align-items:flex-start; /* ESTA ES LA CLAVE */
+}
+
+.card{
+    width:300px;
+    align-self:flex-start;
+}
+
 
 
 /* ========================= */
@@ -307,3 +394,34 @@ footer{
     }
 
 }
+
+
+
+/* ========================= */
+/* ACORDEÓN GENERAL SECCIÓN */
+/* ========================= */
+
+.contenido-seccion{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height 0.7s ease, opacity 0.4s ease;
+}
+
+.contenido-seccion.mostrar{
+    max-height:5000px;
+    opacity:1;
+    margin-top:30px;
+}
+
+.titulo-click{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.titulo-click:hover{
+    transform:scale(1.03);
+    color:#c084fc;
+}
+
+
