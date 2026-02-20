@@ -303,6 +303,46 @@ footer{
 
 
 /* ========================= */
+/* FLECHAS LATERALES CARRUSEL */
+/* ========================= */
+
+.carrusel{
+    position:relative; /* 🔥 importante */
+}
+
+.flecha{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(157,78,221,0.8);
+    color:white;
+    border:none;
+    font-size:28px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+    z-index:10;
+}
+
+.flecha:hover{
+    background:#c77dff;
+    transform:translateY(-50%) scale(1.1);
+}
+
+.izquierda{
+    left:10px;
+}
+
+.derecha{
+    right:10px;
+}
+
+/* ========================= */
 /* ACORDEÓN PAQUETES */
 /* ========================= */
 
