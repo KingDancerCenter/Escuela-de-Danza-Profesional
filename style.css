@@ -11,14 +11,14 @@
 
 body{
     background:
-        linear-gradient(rgb(7, 7, 7), rgba(106,13,173,0.75)),
+        linear-gradient(rgb(120, 37, 180), rgba(160, 47, 240, 0.75)),
         url("imagenes/king1.jpeg");
     background-size: contain;
     background-position:center;
     background-attachment:fixed;
     color:#ffffff;
     overflow-x:hidden;
-    color: #9a812d;
+    color: #bf9b25;
 
 }
 
@@ -60,7 +60,7 @@ body{
 
 .contenido-header{
     position:relative;
-    z-index:2;
+    z-index:4;
     padding:20px;
 }
 
@@ -108,7 +108,7 @@ body{
     text-align:center;
     margin-bottom:10px;
     font-weight:800;
-    color:#dcba4882;
+    color:#e9b508;
     text-transform:uppercase;
     letter-spacing:3px;
 }
@@ -175,6 +175,8 @@ section{
     border:1px solid #2a2a2a;
     position:relative;
     overflow:hidden;
+    
+    margin: 1% 1%;
 }
 
 .card::before{
@@ -194,7 +196,7 @@ section{
 
 .card:hover{
     transform:translateY(-12px);
-    border:1px solid #c77dff;
+    border:1px solid #fde407;
 }
 
 .card h3{
@@ -229,16 +231,16 @@ section{
 }
 
 .btn-card:hover{
-    background:#b873ef;
+    background:#b773ef;
 }
 
 /* ========================= */
 /* PREMIUM */
 /* ========================= */
 
-.premium{
+.premium{/*brillo de los paquetes p*/
     border:2px solid #c77dff;
-    box-shadow:0 0 30px rgba(239, 198, 32, 0.7);
+    box-shadow:0 0 50px rgba(233, 193, 19, 0.7);
 }
 
 /* ========================= */
@@ -465,3 +467,116 @@ footer{
 }
 
 
+/* ================= VISTAS TIPO APP ================= */
+
+.vista{
+    display:none;
+    padding:80px 10%;
+    /*min-height:100vh;*/
+    text-align:center;
+    animation:fade 0.5s ease;
+}
+
+.vista.activa{
+    display:block;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* BOTONES MENU */
+
+.logo{
+    font-size:500%;
+    margin-bottom:40px;
+    color:#eac90c;
+    font-family: cursive;
+}
+
+.menu-principal{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.btn-menu{
+    background:#9d4edd;
+    border:none;
+    padding:15px 35px;
+    border-radius:40px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-menu:hover{
+    background:#c77dff;
+    transform:scale(1.1);
+}
+
+/* BOTON REGRESAR */
+
+.btn-regresar{
+    margin-top:40px;
+    background:#444;
+    border:none;
+    padding:12px 30px;
+    border-radius:40px;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-regresar:hover{
+    background:#c77dff;
+}
+
+
+
+
+/*BOTÓN MÚSICA*/
+
+.reproductor{
+    width:320px;
+    background:linear-gradient(45deg,#7b2ff7,#b5179e);
+    padding:15px;
+    border-radius:20px;
+    color:white;
+    text-align:center;
+    margin:30px auto;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.info-cancion{
+    font-weight:bold;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.controles{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.controles button{
+    background:white;
+    color:#7b2ff7;
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.controles button:hover{
+    transform:scale(1.1);
+}
+
+/*=========================================*/
