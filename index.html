@@ -18,166 +18,49 @@
 <div class="contenido-header">
 <button class="btn" onclick="toggleVideo()" id="btnAudio">
 🔊 Activar sonido
-<p>💜 Kings Dance Center 💜</p>
+<p>♛Kings Dance Center♛</p>
 </button>
 </div>
 </header>
 
-<div class="titulo">
-<h1>💜KINGS DANCE CENTER💜</h1>
-<p>- Escuela de Danza Profesional -</p>
-<p>- LOS REYES -</p>
-<p>- Eduardo García -</p>
+<!-- ================= MENU PRINCIPAL ================= -->
 
-<div class="header-buttons">
-<a href="#paquetes" class="btn">Ver Paquetes</a>
-<a href="#clases" class="btn">Clases</a>
-<a href="#efectos" class="btn">Efectos Especiales</a>
-<a href="#galeria" class="btn">Galería</a>
-<a href="https://www.instagram.com/kings_dance_center" target="visor" class="btn insta">Instagram</a>
-</div>
-</div>
 
-<!-- ================= SUCURSALES ================= -->
+<!--------------------------------------------------------------->
+<div class="reproductor">
 
-<section class="sucursales">
-<h2 class="titulos">📍 Visita nuestras Sucursales</h2>
+    <div class="info-cancion">
+        <span id="nombreCancion">Nombre de la canción</span>
+    </div>
 
-<div class="cards">
-<div class="card">
-<h3>SUCURSAL REYES</h3>
-<p>56430 av. Texcoco, C. 10 Esq,<br> Valle de los Reyes, 56430 Mexico, Méx.</p>
-</div>
+    <div class="controles">
+        <button onclick="anterior()">⏮</button>
+        <button onclick="togglePlay()" id="btnPlay">▶</button>
+        <button onclick="siguiente()">⏭</button>
+    </div>
 
-<div class="card">
-<h3>SUCURSAL EL PINO</h3>
-<p>Francisco I. Madero 2,<br> El Pino, 56507 El Pino, Méx.</p>
-</div>
+    <audio id="audio"></audio>
 
-<div class="card">
-<h3>SUCURSAL IZTAPALAPA</h3>
-<p>Sol 50, Lomas de la Estancia,<br> Iztapalapa, 09640 Ciudad de México, CDMX</p>
 </div>
-</div>
+<!--------------------------------------------------------------->
+
+<section id="menu" class="vista activa">
+    <h1 class="logo">👑KINGS DANCE CENTER👑</h1>
+
+    <div class="menu-principal">
+        <button onclick="mostrarVista('paquetes')" class="btn-menu">Paquetes</button>
+        <button onclick="mostrarVista('clases')" class="btn-menu">Clases</button>
+        <button onclick="mostrarVista('efectos')" class="btn-menu">Efectos</button>
+        <button onclick="mostrarVista('galeria')" class="btn-menu">Galería</button>
+    </div>
 </section>
 
-<!-- ================= SERVICIOS ================= -->
-
-<section class="servicios">
-<h2 class="titulos">💃 Servicios Profesionales</h2>
-
-<div class="cards">
-<div class="card">
-<h3>Montaje Coreográfico</h3>
-<ul>
-<li>Presentaciones</li>
-<li>XV años</li>
-<li>Bodas</li>
-<li>Salidas escolares</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Clases de Baile</h3>
-<ul>
-<li>Jazz</li>
-<li>Pop</li>
-<li>Ritmos Latinos</li>
-<li>Urbano</li>
-<li>Quebradita</li>
-</ul>
-</div>
-</div>
-</section>
-
-<!-- ================= HORARIOS ================= -->
-
-<section id="clases" ></section>
-
-<h2 class="titulos titulo-click" onclick="toggleSeccion('clases')">
-Horario sucursal los Reyes
-</h2>
-
-<div class="cards contenido-seccion" id="contenido-clases">
-
-
-<div class="cards">
-<div class="card">
-<h3>Lunes</h3>
-<ul>
-<li>Jazz</li>
-<li>(Alynai Solís)</li>
-<li>4:00 PM</li>
-<li>5:30 PM</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Martes</h3>
-<ul>
-<li>Pop</li>
-<li>(Eduardo García)</li>
-<li>4:00 PM</li>
-<li>Pop avanzado</li>
-<li>(Eduardo García)</li>
-<li>5:30 PM</li>
-<li>Salsa</li>
-<li>7:00 PM</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Miércoles</h3>
-<ul>
-<li>Jazz</li>
-<li>(Alynai Solís)</li>
-<li>4:00 PM</li>
-<li>Bachata</li>
-<li>Karim Castillo</li>
-<li>5:30 PM</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Jueves</h3>
-<ul>
-<li>Quebradita principiante</li>
-<li>Karim Castillo</li>
-<li>4:00 PM</li>
-<li>Bachata</li>
-<li>Karim Castillo</li>
-<li>5:30 PM</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Viernes</h3>
-<ul>
-<li>Urbano</li>
-<li>Giovani</li>
-<li>4:00 PM</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Sábado</h3>
-<ul>
-<li>Quebradita avanzado</li>
-<li>12:30 PM</li>
-<li>Pop</li>
-<li>(Eduardo García)</li>
-<li>4:00 PM</li>
-</ul>
-</div>
-</div>
-</section>
-
-</div>
+<!-- ================= PAQUETES ================= -->
 
 <!--PAQUETES----------------------------------------------------->
-<section id="paquetes" class="paquetes">
+<section id="paquetes"  class="vista">
 <h2 class="titulos titulo-click" onclick="toggleSeccion('paquetes')">
-🎭 Paquetes Coreográficos
+Paquetes Coreográficos
 </h2>
 
 
@@ -270,7 +153,7 @@ Edición de audio.<br>
 <div class="card paquete premium">
 
 <button class="acordeon-titulo" onclick="togglePaquete(this)">
-PAQUETE GRUPO KINGS 👑
+👑PAQUETE GRUPO KINGS
 </button>
 
 <div class="contenido-paquete">
@@ -305,18 +188,105 @@ Uñas.
 </div>
 
 </div>
+
+<button onclick="volverMenu()" class="btn-regresar">⬅ Regresar</button>
+
 </section>
 
+<!-- ================= CLASES ================= -->
+
+<section id="clases" class="vista">
+
+<h2 class="titulos titulo-click" onclick="toggleSeccion('clases')">
+🗓️Horario sucursal los Reyes
+</h2>
+
+<div class="cards contenido-seccion" id="contenido-clases">
 
 
+<div class="cards">
+<div class="card">
+<h3>Lunes</h3>
+<ul>
+<li>Jazz</li>
+<li>(Alynai Solís)</li>
+<li>4:00 PM</li>
+<li>5:30 PM</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Martes</h3>
+<ul>
+<li>Pop</li>
+<li>(Eduardo García)</li>
+<li>4:00 PM</li>
+<li>Pop avanzado</li>
+<li>(Eduardo García)</li>
+<li>5:30 PM</li>
+<li>Salsa</li>
+<li>7:00 PM</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Miércoles</h3>
+<ul>
+<li>Jazz</li>
+<li>(Alynai Solís)</li>
+<li>4:00 PM</li>
+<li>Bachata</li>
+<li>Karim Castillo</li>
+<li>5:30 PM</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Jueves</h3>
+<ul>
+<li>Quebradita principiante</li>
+<li>Karim Castillo</li>
+<li>4:00 PM</li>
+<li>Bachata</li>
+<li>Karim Castillo</li>
+<li>5:30 PM</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Viernes</h3>
+<ul>
+<li>Urbano</li>
+<li>Giovani</li>
+<li>4:00 PM</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Sábado</h3>
+<ul>
+<li>Quebradita avanzado</li>
+<li>12:30 PM</li>
+<li>Pop</li>
+<li>(Eduardo García)</li>
+<li>4:00 PM</li>
+</ul>
+</div>
+</div>
 
 
+</div>
+    <button onclick="volverMenu()" class="btn-regresar">⬅ Regresar</button>
+</section>
 
-<!--EFECTOS ESPESIALES------------------------------------------->
+<!-- ================= EFECTOS ================= -->
+ <!--EFECTOS ESPESIALES------------------------------------------->
+<section id="efectos" class="vista">
+   
 <section id="efectos"></section>
 
 <h2 class="titulos titulo-click" onclick="toggleSeccion('efectos')">
-🔥 Paquete Efectos Especiales
+🔥Paquete Efectos Especiales🔥 
 </h2>
 
 
@@ -395,7 +365,7 @@ Contratar
 <div class="card paquete premium">
 
 <button class="acordeon-titulo" onclick="togglePaquete(this)">
-🔥 Paquete Completo
+👑Paquete Completo
 </button>
 
 <div class="contenido-paquete">
@@ -408,13 +378,13 @@ Contratar
 
 </div>
 
-</div>
-</section>
+
 
 
 <!---------------------------------->
 <section id="ejemplos">
-<h2 class="titulos">✨ Mira los videos de ejemplo de efectos espesiales en instagram</h2>
+<h2 class="titulos">✨instagram✨ </h2>
+<h2 class="cards"> Ejemplos </h2>
 
 <div style="text-align:center;">
 <a href="https://www.instagram.com/reels/DKsRpAURHRF/" class="btn">Hielo Seco</a>
@@ -423,12 +393,20 @@ Contratar
 </section>
 <!---------------------------------->
 
+</div>
 
-<section id="galeria">
-<h2 class="titulos">🎥 Renta de vestuario</h2>
+    <button onclick="volverMenu()" class="btn-regresar">⬅ Regresar</button>
+</section>
+
+<!-- ================= GALERIA ================= -->
+
+<section id="galeria" class="vista">
+
+<section id="galeria"></section>
+<h2 class="titulos">Renta de vestuario</h2>
 
 <p style="text-align:center; font-size:20px; margin-bottom:20px;">
-💃 Por solo $600
+<h1>Por solo $600</h1>
 </p>
 
 <div class="carrusel">
@@ -446,7 +424,63 @@ Contratar
 
 </div>
 
+ <button onclick="volverMenu()" class="btn-regresar">⬅ Regresar</button>
+
 </section>
+
+
+<!-- ================= SUCURSALES ================= -->
+
+<section class="sucursales">
+<h2 class="titulos">Visita nuestras Sucursales</h2>
+
+<div class="cards">
+<div class="card">
+<h3>SUCURSAL REYES</h3>
+<p>56430 av. Texcoco, C. 10 Esq,<br> Valle de los Reyes, 56430 Mexico, Méx.</p>
+</div>
+
+<div class="card">
+<h3>SUCURSAL EL PINO</h3>
+<p>Francisco I. Madero 2,<br> El Pino, 56507 El Pino, Méx.</p>
+</div>
+
+<div class="card">
+<h3>SUCURSAL IZTAPALAPA</h3>
+<p>Sol 50, Lomas de la Estancia,<br> Iztapalapa, 09640 Ciudad de México, CDMX</p>
+</div>
+</div>
+</section>
+
+<!-- ================= SERVICIOS ================= -->
+
+<section class="servicios">
+<h2 class="titulos">Servicios Profesionales</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Montaje Coreográfico</h3>
+<ul>
+<li>Presentaciones</li>
+<li>XV años</li>
+<li>Bodas</li>
+<li>Salidas escolares</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Clases de Baile</h3>
+<ul>
+<li>Jazz</li>
+<li>Pop</li>
+<li>Ritmos Latinos</li>
+<li>Urbano</li>
+<li>Quebradita</li>
+</ul>
+</div>
+</div>
+</section>
+
 
 <header class="hero">
 
@@ -468,8 +502,8 @@ Contratar
 
 
 <footer>
-    <h2>✨ KINGS DANCE CENTER ✨</h2>
-    <p>Transformamos momentos en espectáculos inolvidables 💜</p>
+    <h2>♛KINGS DANCE CENTER♛</h2>
+    <p>💜Transformamos momentos en espectáculos inolvidables💜</p>
 </footer>
 
 <script>
@@ -565,8 +599,102 @@ function toggleSeccion(id){
 }
 </script>
 
+<script>
+function mostrarVista(id){
+
+    document.querySelectorAll(".vista").forEach(v => {
+        v.classList.remove("activa");
+    });
+
+    document.getElementById(id).classList.add("activa");
+}
+
+function volverMenu(){
+    document.querySelectorAll(".vista").forEach(v => {
+        v.classList.remove("activa");
+    });
+
+    document.getElementById("menu").classList.add("activa");
+}
+</script>
 
 
+<script>
+document.querySelectorAll("video").forEach(video => {
+
+    video.addEventListener("play", function(){
+
+        document.querySelectorAll("video").forEach(otroVideo => {
+
+            if(otroVideo !== video){
+                otroVideo.pause();
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+
+<!--------------------------------------------------------->
+
+<script>
+
+const canciones = [
+    { nombre: "Canción 1", src: "musica/cancion1.mp3" },
+    { nombre: "Canción 2", src: "musica/cancion2.mp3" },
+    { nombre: "Canción 3", src: "musica/cancion3.mp3" }
+];
+
+let indice = 0;
+const audio = document.getElementById("audio");
+const nombreCancion = document.getElementById("nombreCancion");
+const btnPlay = document.getElementById("btnPlay");
+
+function cargarCancion(){
+    audio.src = canciones[indice].src;
+    nombreCancion.textContent = canciones[indice].nombre;
+}
+
+function togglePlay(){
+    if(audio.paused){
+        audio.play();
+        btnPlay.textContent = "⏸";
+    }else{
+        audio.pause();
+        btnPlay.textContent = "▶";
+    }
+}
+
+function siguiente(){
+    indice++;
+    if(indice >= canciones.length){
+        indice = 0;
+    }
+    cargarCancion();
+    audio.play();
+    btnPlay.textContent = "⏸";
+}
+
+function anterior(){
+    indice--;
+    if(indice < 0){
+        indice = canciones.length - 1;
+    }
+    cargarCancion();
+    audio.play();
+    btnPlay.textContent = "⏸";
+}
+
+audio.addEventListener("ended", siguiente);
+
+cargarCancion();
+
+</script>
+
+<!------------------------------------------------------------->
 
 </body>
 </html>
