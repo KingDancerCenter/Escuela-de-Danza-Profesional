@@ -18,7 +18,7 @@ body{
     background-attachment:fixed;
     color:#ffffff;
     overflow-x:hidden;
-    color: #bf9b25;
+    color: #FFD700;
 
 }
 
@@ -108,7 +108,8 @@ body{
     text-align:center;
     margin-bottom:10px;
     font-weight:800;
-    color:#e9b508;
+   color: #D4AF37;
+text-shadow: 0 0 5px #FFD700;
     text-transform:uppercase;
     letter-spacing:3px;
 }
@@ -194,9 +195,9 @@ section{
     left:100%;
 }
 
-.card:hover{
+.card:hover{/*margen de selección*/
     transform:translateY(-12px);
-    border:1px solid #fde407;
+    border:3px solid #ffd900;
 }
 
 .card h3{
@@ -316,7 +317,7 @@ footer{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    background:rgba(157,78,221,0.8);
+    background:rgba(74, 5, 131, 0.8);
     color:white;
     border:none;
     font-size:28px;
@@ -461,9 +462,9 @@ footer{
     transition:0.3s;
 }
 
-.titulo-click:hover{
+.titulo-click:hover{/*cursor cerca de titulos*/
     transform:scale(1.03);
-    color:#c084fc;
+    color:#80029f;
 }
 
 
@@ -491,7 +492,7 @@ footer{
 .logo{
     font-size:500%;
     margin-bottom:40px;
-    color:#eac90c;
+    color:#FFD700;
     font-family: cursive;
 }
 
@@ -522,17 +523,17 @@ footer{
 
 .btn-regresar{
     margin-top:40px;
-    background:#444;
+    background:#d96afe;
     border:none;
     padding:12px 30px;
     border-radius:40px;
-    color:white;
+    color:#5e048f;
     cursor:pointer;
     transition:0.3s;
 }
 
 .btn-regresar:hover{
-    background:#c77dff;
+    background:#f3d701;
 }
 
 
@@ -564,7 +565,7 @@ footer{
 }
 
 .controles button{
-    background:white;
+    background:rgb(249, 248, 248);
     color:#7b2ff7;
     border:none;
     width:40px;
@@ -580,3 +581,60 @@ footer{
 }
 
 /*=========================================*/
+
+
+/* CONTENEDOR DEL LOGO */
+/* CONTENEDOR */
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+/* LOGO REDONDO */
+.logo-kings{
+    width: 350px;
+    max-width: 80%;
+    aspect-ratio: 1/1; /* Mantiene proporción perfecta */
+    object-fit: cover;
+
+    border-radius: 500%; /* 🔥 totalmente circular */
+   
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+
+    /* Glow dorado elegante */
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.5),
+        0 0 25px #D4AF37,
+        0 0 50px rgba(212,175,55,0.5);
+
+    transition: all 0.4s ease;
+}
+
+/* EFECTO HOVER SUAVE */
+.logo-kings:hover{
+    transform: scale(1.07);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.6),
+        0 0 35px #FFD700,
+        0 0 70px rgba(255,215,0,0.7);
+}
+
+
+/*============================================*/
+
+.card-link{
+    text-decoration: none;
+    color: inherit;  /* 🔥 hereda el color original */
+}
+
+.card-link:visited{
+    color: inherit;  /* evita que se ponga morado */
+}
+
+.card-link .card{
+    cursor: pointer;
+}
