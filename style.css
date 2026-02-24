@@ -112,7 +112,32 @@ body{
 text-shadow: 0 0 5px #FFD700;
     text-transform:uppercase;
     letter-spacing:3px;
+    }
+
+
+/* ========================= */
+/* TITULOS QUE FUNCIONAN COMO BOTÓN */
+/* ========================= */
+
+.titulo-click{
+    display:inline-block;
+    background: linear-gradient(45deg,#7b2ff7,#b5179e);
+    padding:15px 35px;
+    border-radius:40px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
+
+.titulo-click:hover{
+    transform: scale(1.05);
+    background: linear-gradient(45deg,#b5179e,#7b2ff7);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.titulo-click:active{
+    transform: scale(0.97);
+}    
 
 /* ========================= */
 /* BOTONES */
@@ -153,19 +178,13 @@ text-shadow: 0 0 5px #FFD700;
 /* ========================= */
 
 section{
-    padding:10px 10%;
+    padding:60px 8%;
 }
 
 /* ========================= */
 /* CARDS */
 /* ========================= */
 
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:40px;
-}
 
 .card{
     background:#1a1a1a;
@@ -283,13 +302,6 @@ footer{
 /* 🎥 CARRUSEL RESPONSIVE */
 /* ========================= */
 
-.carrusel{
-    width:90%;
-    max-width:400px;   /* 🔥 Más pequeño en computadora */
-    margin:40px auto;
-    overflow:hidden;
-    border-radius:20px;
-}
 
 .slides{
     display:flex;
@@ -299,9 +311,9 @@ footer{
 .slides img,
 .slides video{
     width:100%;
-    height:auto;
+    height:100%;
+    object-fit:cover;
     flex-shrink:0;
-    border-radius:20px;
 }
 
 
@@ -310,7 +322,12 @@ footer{
 /* ========================= */
 
 .carrusel{
-    position:relative; /* 🔥 importante */
+    width: min(95%, 500px);
+    aspect-ratio: 4/5; /* 🔥 mantiene proporción */
+    margin:40px auto;
+    overflow:hidden;
+    border-radius:20px;
+    position:relative;
 }
 
 .flecha{
@@ -405,8 +422,19 @@ footer{
 
 @media(max-width:768px){
 
+    .menu-principal{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn-menu{
+        width:90%;
+        font-size:16px;
+    }
+
     .hero{
-        height:75vh;
+        height:60vh;   /* 🔥 más pequeño en celular */
+        min-height:350px;
     }
 
     .titulo h1{
@@ -472,7 +500,8 @@ footer{
 
 .vista{
     display:none;
-    padding:80px 10%;
+    padding:60px 8%;
+    min-height:70vh; /* 🔥 mantiene estructura sin exagerar */
     /*min-height:100vh;*/
     text-align:center;
     animation:fade 0.5s ease;
@@ -542,7 +571,7 @@ footer{
 /*BOTÓN MÚSICA*/
 
 .reproductor{
-    width:320px;
+    width:min(90%, 400px);
     background:linear-gradient(45deg,#7b2ff7,#b5179e);
     padding:15px;
     border-radius:20px;
@@ -594,24 +623,10 @@ footer{
 
 /* LOGO REDONDO */
 .logo-kings{
-    width: 350px;
-    max-width: 80%;
-    aspect-ratio: 1/1; /* Mantiene proporción perfecta */
+    width: min(350px, 80vw); /* 🔥 tamaño inteligente */
+    aspect-ratio: 1/1;
     object-fit: cover;
-
-    border-radius: 500%; /* 🔥 totalmente circular */
-   
-
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-
-    /* Glow dorado elegante */
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.5),
-        0 0 25px #D4AF37,
-        0 0 50px rgba(212,175,55,0.5);
-
-    transition: all 0.4s ease;
+    border-radius: 50%;
 }
 
 /* EFECTO HOVER SUAVE */
