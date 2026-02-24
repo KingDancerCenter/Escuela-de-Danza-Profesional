@@ -519,7 +519,7 @@ footer{
 /* BOTONES MENU */
 
 .logo{
-    font-size:500%;
+    font-size:300%;
     margin-bottom:40px;
     color:#FFD700;
     font-family: cursive;
@@ -653,3 +653,4 @@ footer{
 .card-link .card{
     cursor: pointer;
 }
+
